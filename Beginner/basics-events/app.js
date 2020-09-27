@@ -9,9 +9,6 @@ const app = Vue.createApp({
     alert() {
       alert('Aleeert!');
     },
-    setName(e) {
-      this.name = e.target.value;
-    },
     confirmName() {
       this.confirmedName = this.name;
     },

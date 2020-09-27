@@ -20,7 +20,7 @@
     <button v-on:click="alert">Show Alert</button>
     <hr />
     <p>Name: {{name}}</p>
-    <input v-on:input="setName" v-on:keydown.enter="confirmName" type="text" />
+    <input v-model="name" v-on:keydown.enter="confirmName" type="text" />
     <p>Confirmed Name: {{confirmedName}}</p>
   </section>
 </body>
