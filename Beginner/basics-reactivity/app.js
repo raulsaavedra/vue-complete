@@ -1,41 +1,35 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
-      name: '',
-      lastname: '',
+      currentValue: 5,
     };
   },
   computed: {
-    fullname() {
-      console.log('Running output');
-      if (this.name === '') {
-        return '';
+    result() {
+      if (this.currentValue < 37) {
+        return 'Not there yet!';
       }
-      return `${this.name} ${this.lastname}`;
+      if (this.currentValue === 37) {
+        return 'Success';
+      }
+      if (this.currentValue > 37) {
+        return 'Too much!';
+      }
     },
   },
   watch: {
-    counter(value) {
-      if (value > 50) {
-        this.counter = 0;
+    currentValue() {
+      if (this.currentValue > 37) {
+        const that = this;
+        setTimeout(() => {
+          that.currentValue = 0;
+        }, 1000);
       }
     },
   },
   methods: {
-    setName(event) {
-      this.name = event.target.value;
-    },
-    add(num) {
-      this.counter = this.counter + num;
-    },
-    reduce(num) {
-      this.counter = this.counter - num;
-      // this.counter--;
-    },
-    resetInput() {
-      this.name = '';
-      this.lastname = '';
+    add(number) {
+      this.currentValue = this.currentValue + number;
     },
   },
 });

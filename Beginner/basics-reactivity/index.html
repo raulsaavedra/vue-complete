@@ -16,14 +16,9 @@
     <h1>Vue Events</h1>
   </header>
   <section id="events">
-    <h2>Events in Action</h2>
-    <button v-on:click="add(10)">Add 10</button>
-    <button v-on:click="reduce(5)">Subtract 5</button>
-    <p>Result: {{ counter }}</p>
-    <input type="text" v-model="name">
-    <input type="text" v-model="lastname">
-    <button v-on:click="resetInput">Reset Input</button>
-    <p>Your Name: {{ fullname }}</p>
+    <button @click="add(5)">Add 5</button>
+    <button @click="add(1)">Add 1</button>
+    <p>Result: {{result}}</p>
   </section>
 </body>
 
