@@ -12,6 +12,28 @@ body {
 
 header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #4fc08d;
+  color: white;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 3rem auto;
   border-radius: 10px;
   padding: 1rem;
@@ -22,45 +44,33 @@ header {
   max-width: 40rem;
 }
 
-#events {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: 3rem auto;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  width: 90%;
-  max-width: 40rem;
-}
-
-#events h2 {
+#styling h2 {
   font-size: 2rem;
   border-bottom: 4px solid #ccc;
   color: #4fc08d;
   margin: 0 0 1rem 0;
 }
 
-#events p {
+#styling p {
   font-size: 1.25rem;
   font-weight: bold;
   border: 1px solid #4fc08d;
-  background-color: #4fc08d;
-  color: white;
   padding: 0.5rem;
   border-radius: 25px;
 }
 
-#events input {
+#styling input {
   font: inherit;
   border: 1px solid #ccc;
 }
 
-#events input:focus {
+#styling input:focus {
   outline: none;
   border-color: #1b995e;
   background-color: #d7fdeb;
 }
 
-#events button {
+#styling button {
   font: inherit;
   cursor: pointer;
   border: 1px solid #ff0077;
@@ -72,9 +82,44 @@ header {
   margin: 0 1rem;
 }
 
-#events button:hover,
-#events button:active {
+#styling button:hover,
+#styling button:active {
   background-color: #ec3169;
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+#styling {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.demo {
+  width: calc(100% - 32px);
+  height: 100px;
+  margin: 16px;
+  border: 2px dashed #ccc;
+}
+
+.active {
+  border-color: red;
+  background-color: salmon;
+}
+.user1 {
+  background-color: blue;
+  color: white;
+}
+.user2 {
+  background-color: purple;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
 }
