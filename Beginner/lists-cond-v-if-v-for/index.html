@@ -19,7 +19,7 @@
     <h2>My tasks</h2>
     <input type="text" v-model="taskValue" @keyup.enter="addTask">
     <button @click="addTask">Add Task</button>
-    <ul v-show="showList">
+    <ul v-if="showList">
       <li @click="removeTask" v-for="(task, index) in tasks" :key="task">{{index}} - {{task}}</li>
     </ul>
     <button @click="toggleList">{{buttonToggle}}</button>
